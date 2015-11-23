@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <title>Signup Widget</title>
+        <script src="jquery-2.1.4.min.js"></script>
+        <script src="signup.js"></script>
+        <link rel="stylesheet" href="signup.css" />
+    </head>
+    <body>
+    <h1>The Signup Widget</h1>
+    
+        <div id="wrapper">
+            <div class="row half">
+                <div class="cell_border">
+                    <div id="first_name" class="cell">
+                        <span class="cell_title">First Name</span>
+                        <div contenteditable="true" class="cell_input"></div>
+                    </div>
+                </div>
+                <div class="cell_border">
+                    <div id="last_name" class="cell">
+                        <span class="cell_title">Last Name</span>
+                        <div contenteditable="true" class="cell_input"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell_border">
+                    <div id="user_id" class="cell">
+                        <span class="cell_title">User ID</span>
+                        <div contenteditable="true" class="cell_input"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row half">
+                <div class="cell_border">
+                    <div id="email1" class="cell validate_email">
+                        <span class="cell_title">Email</span>
+                        <div contenteditable="true" class="cell_input"></div>
+                    </div>
+                </div>
+                <div class="cell_border">
+                    <div id="email2" class="cell validate_email inactive">
+                        <span class="cell_title">Verify Email</span>
+                        <div contenteditable="true" class="cell_input"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row half">
+                <div class="cell_border">
+                    <div id="pword1" class="cell pword validate_pword">
+                        <span class="cell_title">Password</span>
+                        <input type="password" class="cell_input"></input>
+                    </div>
+                </div>
+                <div class="cell_border">
+                    <div id="pword2" class="cell pword validate_pword inactive">
+                        <span class="cell_title">Verify Password</span>
+                        <input type="password" class="cell_input"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="row submit">
+                <div class="cell_border">
+                    <div id="submit" class="cell inactive">
+                        <div class="cell_text">Sign up!</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="results">
+                <center><b>Submitted Information</b></center>
+                <span>First Name: </span><span id="res_fn"></span><br/>
+                <span>Last Name:  </span><span id="res_ln"></span><br/>
+                <span>User ID: </span><span id="res_uid"></span><br/>
+                <span>Email: </span><span id="res_email"></span><br/>
+                <span>Password: </span><span id="res_pword"></span>
+            </div>
+        </div>
+    </body>
+</html>

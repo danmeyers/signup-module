@@ -1,0 +1,192 @@
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 50%;
+    overflow: visible;
+    min-width:350px;
+    max-width: 500px;
+}
+
+.row {
+    width: 100%;
+    font-size:0;
+    margin-top: -1px;
+    height: 70px;
+}
+
+.row.submit {
+    margin-top: 10px;
+}
+
+.row  .cell {
+    background-color: white;
+    margin: 1px;
+    height: 70px;
+    padding: 0 15px;
+    visibility: visibile;
+    cursor: pointer;
+}
+
+input {
+    cursor: inherit;
+}
+
+
+.row .cell.todo {
+    background-color: #ffffb3;
+}
+
+.row .cell.not_valid {
+    background-color: #ffcccc;
+}
+
+.row  .cell.focused {
+    background-color: #e5ecff;
+    font-weight: bold;
+    cursor: text;
+}
+
+.row .cell.validated {
+    background-color: #e6ffcc;
+}
+
+
+.row .cell.inactive {
+    background-color: lightgray;
+    cursor: auto;
+}
+
+.row .cell.inactive > * {
+    visibility: hidden;
+}
+
+.row.submit > .cell_border {
+    background-color: rgba(0,0,0,0);
+    height: 100%;
+}
+
+.row  #submit.cell {
+    background: linear-gradient(to right, #4da5ff 0%, #fff 0%); 
+    //background: linear-gradient(to right, #ddd 00%, #fff 00%); 
+    margin: 1px;
+    height: 70px;
+    padding: 0 15px;
+    visibility: visibile;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: inset -1px -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+    inset 1px 1px 1px rgba(0,0,0,.2); /*top internal highlight*/
+    -moz-box-shadow: inset -1px -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+    inset 1px 1px 1px rgba(0,0,0,.2); /*top internal highlight*/
+    -webkit-box-shadow: inset -1px -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+    inset 1px 1px 1px rgba(0,0,0,.2); /*top internal highlight*/
+}
+
+.row  #submit.cell:hover {
+    box-shadow:
+    0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+    2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+    inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+    inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+    -moz-box-shadow:
+    0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+    2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+    inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+    inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+    -webkit-box-shadow:
+    0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+    2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+    inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+    inset 0 1px 1px rgba(255,255,255,1); /*top internal highlight*/
+    
+    font-weight: bold;
+}
+
+.row  #submit.cell:active {
+    box-shadow:
+    0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+    inset 2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+    inset -1px -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+    inset 1px 1px 1px rgba(0,0,0,.2); /*top internal highlight*/
+    -moz-box-shadow:
+    0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+    inset 2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+    inset -1px -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+    inset 1px 1px 1px rgba(0,0,0,.2); /*top internal highlight*/
+    -webkit-box-shadow:
+    0px -1px 3px rgba(190,255,255,0.5), /*top external highlight*/
+    inset 2px 3px 3px rgba(0,0,0,0.2), /*bottom external shadow*/
+    inset -1px -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/
+    inset 1px 1px 1px rgba(0,0,0,.2); /*top internal highlight*/
+}
+
+.row  #submit.cell:active .cell_text {
+    color:darkred;
+}
+
+.row #submit.cell.inactive {
+
+}
+
+.row #submit.cell.inactive > * {
+    visibility: visible; 
+}
+
+
+.row  .cell_border:nth-child(2) .cell {
+    margin: 1px 1px 1px 0;
+}
+
+.row > .cell_border {
+    width: 100%;
+    background-color: darkgray;
+    display: inline-block;
+}
+
+.row.half > .cell_border {
+    width: 50%;
+}
+
+.cell_title {
+    font-size: 16px;
+    color: darkgray;
+    vertical-align: middle;
+    line-height: 70px;
+    position: absolute;
+}
+
+.cell_input, .cell_text {
+    height: 100%;
+    color: black;
+    line-height: 70px;
+    vertical-align: middle;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    outline: 0;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    width: 100%;
+}
+
+.errorText {
+    font-size: 12px;
+    color: #ff4d4d;
+    line-height: 12px;
+    position: absolute;
+    font-weight: normal;
+    white-space: nowrap;
+    margin-top:52px;
+}
+
+#results {
+    margin: 20px auto;
+    font-size: 14px;
+    border: 1px solid black;
+    padding: 5px;
+    width: 300px;
+    display: none;
+}
